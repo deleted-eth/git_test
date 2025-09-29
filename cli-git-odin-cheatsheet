@@ -1,0 +1,62 @@
+Hello world.
+
+
+COMMANDS:
+
+cd: change directory (or, I like to say, crawl directory--move between)
+mkdir [path]: make directory
+	'-p' option will generate nonexistent intermediate directories in [path]
+touch [name]: Create a 0byte file
+ls -Fhstrl: my favorite way to list
+ls -FRhstrl: an even more powerful, recursive search. Shows ALL sub-directories
+wc: word, line, character, and byte count
+cp [old] [new]: copy
+mv [old] [new]: move (also rename)
+pwd: print working directory
+'.' : refers to current directory (exclude quotations)
+'..' : refers to parent directory, relative to working directory (exclude quotations)
+rm [path]: remove a file (note: does not work on directories)
+	'-d' option will remove directories
+	'-r' option will allow for recursive deletion of all rooted files (implies '-d')
+rmdir [path]: removes directories
+man: opens manual for whatever command you use as an argument (press 'q' to exit)
+* : represents zero or more characters (example: *.pdb represents all .pdf files)
+? : represents one character (example: ?ethane.pdb represents methane.pdb)
+	-you can represent 3 characters w/ '???'
+nano [file]: opens the nano text editor, [file] argument becomes name (if used)
+code [file]: opens [file] in Vscode
+cat [.txt]: view file contents
+cat [.txt] [.txt] [.txt]: will "concatenate" or view sequentially the .txt files (files remain unchanged)
+
+
+EXAMPLE:
+
+%ls -F ~/Desktop/shell-lesson-data
+
+SYNTAX (SEE ABOVE):
+
+%: 			     "prompt"
+ls: 			     "command" (in this case, "list")
+-F: 			     "options" (in this case, 'file type' - case sensitive)
+~/Desktop/shell-lesson-data: "argument" (in this case a directory I want to list)
+
+
+Commands related to a remote repository:
+'git clone git@github.com:USER-NAME/REPOSITORY-NAME.git'
+'git push' or 'git push origin main' (Both accomplish the same goal in this context)
+
+Commands related to the workflow:
+'git add .'
+'git commit -m "A message describing what you have done to make this snapshot different"'
+
+Commands related to checking status or log history
+'git status'
+'git log'
+
+The basic Git syntax is program | action | destination.
+
+For example,
+
+git add . is read as git | add | ., where the period represents everything in the current directory;
+'git commit -m "message"' is read as git | commit -m | "message"; and
+'git status' is read as git | status | (no destination).
